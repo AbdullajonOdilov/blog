@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maqola</title>
+</head>
+<body>
+<br>
+<br>
+{%for mavzu in lessons %}
+<h2 style="display:inline;"><a href="/maqola/{{mavzu.id}}/">{{forloop.counter}}.{{mavzu.sarlavha}}</a></h2><br>
+
+{% endfor %}
+<form method="post" action="/maqola/">{%csrf_token%}
+
+    <input type="text" name="s" value="{{mavzu.sarlavha}}">
+    <input type="date" name="d" value="{{mavzu.sana}}">
+    <input type="text" name="m" value="{{mavzu.m_mavzu}}">
+    <input type="text" name="t" value="{{mavzu.matn}}">
+
+
+</form>
+<button type="submit">Qoshish</button>
+
+<button type="submit">Logout</button>
+
+<br>
+<br>
+
+</body>
+</html>

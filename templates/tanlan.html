@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<h1>Tanlangan</h1>
+<br>
+<br>
+{%for mavzu in lessons %}
+<h2 style="display:inline;">{{forloop.counter}}.{{mavzu.sarlavha}} {{mavzu.m_mavzu}}</a></h2><br>
+
+
+
+{% endfor %}
+
+
+</body>
+</html>
